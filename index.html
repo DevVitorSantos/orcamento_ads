@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captação de Pacientes - Estratégia Ads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+            margin-top: -8px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: #e2e8f0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 scroll-smooth">
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Transforme Cliques em <br><span class="text-blue-200">Agendamentos Reais</span>
+            </h1>
+            <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+                Uma estrutura completa de anúncios pensada exclusivamente para clínicas que desejam previsibilidade e crescimento no número de pacientes.
+            </p>
+            <a href="#calculadora" class="bg-white text-blue-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-lg">
+                Simular Meus Resultados
+            </a>
+        </div>
+    </header>
+
+    <!-- Entregáveis Section -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">A Nossa Entrega Estrutural</h2>
+            <p class="text-slate-600">Tudo o que precisa para dominar o mercado local e atrair os pacientes certos.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Item 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                    <i data-lucide="layout"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Landing Page</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Página de alta conversão otimizada para transformar visitantes em contactos no WhatsApp.</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                    <i data-lucide="tag"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Tags & Pixel</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Configuração técnica avançada para treinar a inteligência dos anúncios e baixar o custo por lead.</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                    <i data-lucide="bar-chart-3"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Relatórios</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Transparência total. Saiba exatamente quanto investiu e quantos leads chegaram até a sua recepção.</p>
+            </div>
+            <!-- Item 4 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                    <i data-lucide="gauge"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Gestão Diária</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Acompanhamento ativo das campanhas para ajustar lances, públicos e criativos em tempo real.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora Section -->
+    <section id="calculadora" class="py-20 bg-slate-100 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Simulador de Investimento</h2>
+                <p class="text-slate-600">Arraste a barra para definir a sua meta e veja o orçamento necessário.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+                <div class="p-8 md:p-12 space-y-10">
+                    
+                    <!-- Slider -->
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Leads Desejados por Dia</span>
+                            <span id="leads-val" class="text-5xl font-black text-blue-600">5</span>
+                        </div>
+                        <input type="range" id="leads-slider" min="1" max="50" value="5" class="w-full appearance-none bg-transparent">
+                        <div class="flex justify-between text-xs font-bold text-slate-400 uppercase">
+                            <span>Mín: 1</span>
+                            <span>Médio: 25</span>
+                            <span>Escala: 50+</span>
+                        </div>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                            <p class="text-blue-600 text-xs font-bold uppercase mb-2">Investimento em Ads</p>
+                            <p id="ads-investment" class="text-2xl font-bold text-slate-800">R$ 1.800,00</p>
+                            <p class="text-xs text-slate-500 mt-1">Valor pago direto às plataformas</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                            <p class="text-slate-500 text-xs font-bold uppercase mb-2">Mão de Obra Fixa</p>
+                            <p class="text-2xl font-bold text-slate-800">R$ 1.400,00</p>
+                            <p class="text-xs text-slate-500 mt-1">Estratégia, Gestão e Landing Page</p>
+                        </div>
+                    </div>
+
+                    <!-- Final Total -->
+                    <div class="bg-blue-600 rounded-2xl p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div>
+                            <h4 class="text-blue-100 font-medium mb-1 uppercase text-sm tracking-wider">Investimento Total Mensal</h4>
+                            <p class="text-xs text-blue-200 opacity-80 italic">Estimativa com Lead a R$ 12,00</p>
+                        </div>
+                        <div class="text-center md:text-right">
+                            <span id="total-val" class="text-4xl md:text-5xl font-black tracking-tighter">R$ 3.200,00</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prazo e CTA -->
+    <section class="py-20 px-6 text-center max-w-3xl mx-auto">
+        <div class="bg-white p-10 rounded-3xl border-2 border-dashed border-slate-200">
+            <h2 class="text-2xl font-bold mb-4 italic">Estrutura pronta em apenas 2 semanas.</h2>
+            <p class="text-slate-600 mb-8">
+                Não perdemos tempo. Em 14 dias a sua clínica terá uma máquina de vendas rodando 24h por dia.
+            </p>
+            <a class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-xl" ahref="https://wa.link/38syk8">
+                Quero Começar Agora
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-400 text-sm">
+        <p>&copy; 2024 - Estratégia de Tráfego Pago para Saúde</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        const slider = document.getElementById('leads-slider');
+        const leadsVal = document.getElementById('leads-val');
+        const adsVal = document.getElementById('ads-investment');
+        const totalVal = document.getElementById('total-val');
+
+        const COST_PER_LEAD = 12;
+        const SERVICE_FEE = 1400;
+        const DAYS = 30;
+
+        function updateValues() {
+            const leadsPerDay = parseInt(slider.value);
+            const adsMonthly = leadsPerDay * COST_PER_LEAD * DAYS;
+            const total = adsMonthly + SERVICE_FEE;
+
+            leadsVal.innerText = leadsPerDay;
+            adsVal.innerText = adsMonthly.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            totalVal.innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        slider.addEventListener('input', updateValues);
+        updateValues();
+    </script>
+</body>
+</html>
